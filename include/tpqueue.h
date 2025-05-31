@@ -3,7 +3,6 @@
 #define INCLUDE_TPQUEUE_H_
 
 #include <stdexcept>
-#include <utility>
 
 template<typename T>
 class TPQueue {
@@ -12,7 +11,8 @@ class TPQueue {
     T data_;
     Node* next_;
 
-    explicit Node(const T& data, Node* next = nullptr) : data_(data), next_(next) {}
+    explicit Node(const T& data, Node* next = nullptr)
+        : data_(data), next_(next) {}
   };
 
   Node* head_;
